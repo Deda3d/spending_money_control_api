@@ -360,15 +360,6 @@ namespace spending_money_control_api.Controllers
             return Ok();
         }
 
-        [HttpPost("telegram")]
-        public async Task<ActionResult> SendToTelegram(long id, string text)
-        {
-
-            var SendToTelegram_botClient = new TelegramBotClient(constants.botId);
-            await SendToTelegram_botClient.SendTextMessageAsync(id, text);
-
-            return Ok();
-        }
     }
 }
 //
